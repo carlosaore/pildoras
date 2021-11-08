@@ -7,9 +7,9 @@ const Pildora = (props) => {
 	// have in the app to allow React Query to work share the same cache instead of
 	// querying the server for the same data again.
 	const data = useQueries([
-		{ queryKey: ['center', props.center], queryFn: () => axios.get(`center/id/${props.center}`), retry: false },
-		{ queryKey: ['employee', props.employee], queryFn: () => axios.get(`/employee/${props.employee}`), retry: false },
-		{ queryKey: ['center bookings', props.center], queryFn: () => axios.get(`center/services/${props.center}`), retry: false },
+		{ queryKey: ['center', props.center], queryFn: () => axios.get(`center/id/${props.center}`) },
+		{ queryKey: ['employee', props.employee], queryFn: () => axios.get(`/employee/${props.employee}`) },
+		{ queryKey: ['center bookings', props.center], queryFn: () => axios.get(`center/services/${props.center}`) },
 	])
 
 	console.log("props", props);
