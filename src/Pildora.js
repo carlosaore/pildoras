@@ -12,7 +12,7 @@ const Pildora = (props) => {
 		{ queryKey: ['center bookings', props.center], queryFn: () => axios.get(`center/services/${props.center}`), retry: false },
 	])
 
-	console.log(props);
+	console.log("props", props);
 
 	console.log("center info", data[0].data?.data);
 
@@ -21,7 +21,7 @@ const Pildora = (props) => {
 	// props.service is an id and we don't have an endpoint to get the service with that, so we fetch all the services
 	// and then we filter the one that matches the id
 	// The result is still an array of one element so we need to get the first element
-	console.log("services info", props.service, data[2].data?.data.filter(booking => booking._id === props.service)[0]) ;
+	console.log("service info", data[2].data?.data.filter(booking => booking._id === props.service)[0]) ;
 
 	// Writing data.data.data etc. may be annoying, but try to refrain from re-saving that in a state just
 	// to have a shorter name. It will make the app slower and more error prone because it will need to recalculate
