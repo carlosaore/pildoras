@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pildora {
+  width: 60%;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: gainsboro;
+  padding: 10px;
+}
